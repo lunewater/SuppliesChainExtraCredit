@@ -4,6 +4,8 @@ import App from './App';
 import './index.css';
 
 var pg = require('pg');
+var express = require('express');
+var app = express();
 
 app.get('/db', function (request, response) {
   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
